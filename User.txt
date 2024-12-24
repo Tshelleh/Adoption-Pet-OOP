@@ -1,0 +1,2 @@
+Adopter: 1;adp;123;1233;23;ggg;1,2
+Admin: 2;adm;123;1

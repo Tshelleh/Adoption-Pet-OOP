@@ -1,0 +1,2 @@
+Adoption: 1;1;1;accept;2024-12-23
+Adoption: 2;3;1;Request sent;2024-12-23
