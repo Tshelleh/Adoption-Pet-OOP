@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="petapp.group.adoptionpet.adopterprofilecontroller">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="392.0" prefWidth="180.0" style="-fx-background-color: #003459;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lablelusername" layoutX="46.0" layoutY="120.0" prefHeight="27.0" prefWidth="85.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="113.0" fitWidth="125.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/397057724_11539820.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="171.0" prefHeight="225.0" prefWidth="180.0">
+               <children>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" text="My Profile">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#homepage" prefHeight="40.0" prefWidth="177.0" text="Home Page">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AdoptionHistory" prefHeight="40.0" prefWidth="177.0" text="Adoption History">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="177.0" text="Logout" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#DeleteAccount" prefHeight="42.0" prefWidth="177.0" style="-fx-background-color: ba181b;" text="Delete Profile" textFill="#e0d8d8">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="143.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/bell-svgrepo-com.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="178.0" prefHeight="40.0" prefWidth="422.0" style="-fx-alignment: center;" text="My Profile" textAlignment="CENTER" textFill="#023e8a" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER_RIGHT" layoutX="236.0" layoutY="351.0" mnemonicParsing="false" onAction="#Edit" prefHeight="34.0" prefWidth="113.0" text="Edit" textAlignment="RIGHT" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="250.66666666666669">
+         <font>
+            <Font name="Bodoni MT" size="22.0" />
+         </font>
+      </Button>
+      <TextField fx:id="username" editable="false" layoutX="198.0" layoutY="65.0" prefHeight="25.0" prefWidth="385.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="16.666666666666686">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="198.0" layoutY="30.0" prefHeight="40.0" prefWidth="76.0" text="Name">
+         <font>
+            <Font name="Dubai Regular" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="password" editable="false" layoutX="198.0" layoutY="126.0" prefHeight="25.0" prefWidth="385.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="16.666666666666686">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="198.0" layoutY="91.0" prefHeight="33.0" prefWidth="123.0" text="Password">
+         <font>
+            <Font name="Dubai Regular" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="age" editable="false" layoutX="198.0" layoutY="187.0" prefHeight="25.0" prefWidth="385.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="16.666666666666686">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="199.0" layoutY="151.0" prefHeight="33.0" prefWidth="268.0" text="Age">
+         <font>
+            <Font name="Dubai Regular" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="location" editable="false" layoutX="198.0" layoutY="248.0" prefHeight="25.0" prefWidth="385.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="16.666666666666686">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="199.0" layoutY="212.0" prefHeight="33.0" prefWidth="268.0" text="Location">
+         <font>
+            <Font name="Dubai Regular" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contact" editable="false" layoutX="198.0" layoutY="309.0" prefHeight="25.0" prefWidth="385.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="16.666666666666686">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Label layoutX="199.0" layoutY="273.0" prefHeight="33.0" prefWidth="268.0" text="Contact Information">
+         <font>
+            <Font name="Dubai Regular" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="243.0" layoutY="350.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="318.0">
+         <image>
+            <Image url="@image/edit-3-svgrepo-com.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="410.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveEdit" prefHeight="34.0" prefWidth="113.0" text="Save" textAlignment="RIGHT" textFill="#00820f" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="76.66666666666667">
+         <font>
+            <Font name="Bodoni MT" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="417.0" layoutY="355.0" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="144.0">
+         <image>
+            <Image url="@image/diskette.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

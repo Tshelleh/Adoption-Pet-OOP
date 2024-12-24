@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="adoptersignuppane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="384.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="petapp.group.adoptionpet.signupadoptercontroller">
+   <children>
+      <Hyperlink fx:id="llogin" layoutX="247.0" layoutY="417.0" onAction="#login" text="Log in">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="136.0" layoutY="420.0" text="Do you have an account?">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="75.0" prefHeight="25.0" prefWidth="63.0" text="User Name" textFill="#146b84">
+         <font>
+            <Font name="Arial Nova Cond" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adoptername" layoutX="111.0" layoutY="75.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="48.0" layoutY="128.0" prefHeight="25.0" prefWidth="63.0" text="Password" textFill="#146b84">
+         <font>
+            <Font name="Arial Nova Cond" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="285.0" prefHeight="25.0" prefWidth="24.0" text="Age" textFill="#146b84">
+         <font>
+            <Font name="Arial Nova Cond" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adopterage" layoutX="111.0" layoutY="304.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="48.0" layoutY="181.0" prefHeight="25.0" prefWidth="63.0" text="Location" textFill="#146b84">
+         <font>
+            <Font name="Arial Nova Cond" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adopterloc" layoutX="111.0" layoutY="191.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label ellipsisString="" layoutX="41.0" layoutY="229.0" prefHeight="35.0" prefWidth="63.0" text="Contact information" textAlignment="CENTER" textFill="#146b84" wrapText="true">
+         <font>
+            <Font name="Arial Nova Cond" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adoptercont" layoutX="111.0" layoutY="248.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="33.0" layoutY="33.0" prefHeight="17.0" prefWidth="155.0" text="User Information" textFill="#0ab2f4">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="bsignup" layoutX="235.0" layoutY="360.0" mnemonicParsing="false" onAction="#signup" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: green;" text="Sign up" textFill="#f4faf4" />
+      <PasswordField fx:id="adopterpass" layoutX="112.0" layoutY="134.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="bexit" layoutX="122.0" layoutY="360.0" mnemonicParsing="false" onAction="#Exit" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: Red;" text="Exit" textFill="#f7f5f5" />
+   </children>
+</Pane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="petapp.group.adoptionpet.adminmenucontroller">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="177.0" style="-fx-background-color: #003459;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lablelusername" layoutX="46.0" layoutY="120.0" prefHeight="27.0" prefWidth="85.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="113.0" fitWidth="125.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/397057724_11539820.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="171.0" prefHeight="229.0" prefWidth="177.0">
+               <children>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" onAction="#adminprofile" prefHeight="40.0" prefWidth="177.0" text="My Profile">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" text="Home Page">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" onAction="#adoptionrequest" prefHeight="40.0" prefWidth="177.0" text="Adoption Requests">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Reports" prefHeight="40.0" prefWidth="177.0" text="Reports">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="177.0" text="Logout" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#DeleteAccount" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: ba181b;" text="Delete Profile" textFill="#e0d8d8">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="143.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/bell-svgrepo-com.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="labsheltername" layoutX="178.33333333333334" layoutY="3.3333333333333335" prefHeight="43.0" prefWidth="546.0" style="-fx-alignment: center;" text="Shelter Name" textAlignment="CENTER" textFill="#023e8a" AnchorPane.leftAnchor="178.33333333333334" AnchorPane.rightAnchor="-1.6666666666666288" AnchorPane.topAnchor="3.3333333333333335">
+         <font>
+            <Font name="Book Antiqua" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="pettable" layoutX="186.0" layoutY="177.33333333333334" onMouseClicked="#GetSelected" prefHeight="223.0" prefWidth="362.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="177.0">
+        <columns>
+            <TableColumn fx:id="idcol" editable="false" prefWidth="75.0" text="PetId" visible="false" />
+          <TableColumn fx:id="namcol" prefWidth="96.39999389648438" text="Pet Name" />
+          <TableColumn fx:id="agecol" prefWidth="53.20001220703125" text="Age" />
+            <TableColumn fx:id="speciescol" prefWidth="55.0" text="Species" />
+            <TableColumn fx:id="breedcol" prefWidth="58.5999755859375" text="Breed" />
+            <TableColumn fx:id="healthcol" prefWidth="101.40005493164062" text="Health Status" />
+            <TableColumn fx:id="availcol" editable="false" prefWidth="75.0" text="Availability" visible="false" />
+        </columns>
+      </TableView>
+      <Pane layoutX="548.0" layoutY="164.0" prefHeight="229.0" prefWidth="169.0">
+         <children>
+            <Button layoutX="9.0" layoutY="167.0" mnemonicParsing="false" onAction="#AddPet" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: green;" text="Add" textFill="#fcf8f8">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="petage" layoutX="10.0" layoutY="43.0" promptText="Enter Pet Age" />
+            <TextField fx:id="petspec" layoutX="10.0" layoutY="72.0" promptText="Enter Species" />
+            <TextField fx:id="petname" layoutX="10.0" layoutY="14.0" promptText="Enter Pet Name" />
+            <TextField fx:id="petbreed" layoutX="10.0" layoutY="101.0" promptText="Enter Breed" />
+            <TextField fx:id="pethealth" layoutX="10.0" layoutY="130.0" promptText="Enter Health Status" />
+            <Button fx:id="bdelete" layoutX="9.0" layoutY="199.0" mnemonicParsing="false" onAction="#removepet" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bedit" layoutX="94.0" layoutY="199.0" mnemonicParsing="false" onAction="#editpet" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: yellow;" text="Update" textAlignment="CENTER" textFill="#101010">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="186.0" layoutY="58.0" prefHeight="105.0" prefWidth="522.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+         <children>
+            <TextField fx:id="petsearchname" layoutX="14.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0" promptText="Pet Name" />
+            <TextField fx:id="petsearchbreed" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="149.0" promptText="Breed" />
+            <TextField fx:id="petsearchage" layoutX="180.0" layoutY="32.0" prefHeight="25.0" prefWidth="122.0" promptText="Pet Age" />
+            <TextField fx:id="petsearchspec" layoutX="180.0" layoutY="71.0" prefHeight="25.0" prefWidth="122.0" promptText="Species" />
+            <Button layoutX="439.0" layoutY="69.0" mnemonicParsing="false" onAction="#Search" style="-fx-background-color: green;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="372.0" layoutY="69.0" mnemonicParsing="false" onAction="#Clearsearch" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: ffb703;" text="Clear">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

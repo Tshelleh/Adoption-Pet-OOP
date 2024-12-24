@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="signuppane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="384.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="petapp.group.adoptionpet.signup1controller">
+   <children>
+      <ImageView fx:id="logoimg" fitHeight="164.0" fitWidth="187.0" layoutX="115.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="156.0" layoutY="244.0" text="Sing Up as " textAlignment="CENTER" textFill="#1684c4">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="singupasshelter" layoutX="134.0" layoutY="295.0" mnemonicParsing="false" onAction="#signupadmin" prefHeight="23.0" prefWidth="127.0" text="Shelter">
+         <font>
+            <Font name="Arial Nova" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="signupasadopter" layoutX="134.0" layoutY="332.0" mnemonicParsing="false" onAction="#signupadopter" prefHeight="23.0" prefWidth="127.0" text="Adopter" textFill="#0b0b0b">
+         <font>
+            <Font name="Arial Nova Cond" size="12.0" />
+         </font>
+      </Button>
+      <Hyperlink fx:id="llogin" layoutX="240.0" layoutY="427.0" onAction="#login" text="Log in">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="129.0" layoutY="430.0" text="Do you have an account?">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="134.0" layoutY="372.0" mnemonicParsing="false" onAction="#Exit" prefHeight="23.0" prefWidth="127.0" style="-fx-background-color: red;" text="Exit" textFill="#faf9f9">
+         <font>
+            <Font name="Arial Nova Cond" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="petapp.group.adoptionpet.adoptermenucontroller">
+   <children>
+      <Pane layoutX="181.0" layoutY="48.0" prefHeight="105.0" prefWidth="506.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+         <children>
+            <TextField fx:id="petsearchname" layoutX="14.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0" promptText="Pet Name" />
+            <TextField fx:id="petsearchbreed" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="149.0" promptText="Breed" />
+            <TextField fx:id="petsearchage" layoutX="180.0" layoutY="32.0" prefHeight="25.0" prefWidth="122.0" promptText="Pet Age" />
+            <TextField fx:id="petsearchspec" layoutX="180.0" layoutY="71.0" prefHeight="25.0" prefWidth="122.0" promptText="Species" />
+            <Button layoutX="429.0" layoutY="69.0" mnemonicParsing="false" onAction="#Search" style="-fx-background-color: green;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="369.0" layoutY="69.0" mnemonicParsing="false" onAction="#Clearsearch" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: ffb703;" text="Clear">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane prefHeight="394.0" prefWidth="177.0" style="-fx-background-color: #003459;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lablelusername" layoutX="46.0" layoutY="120.0" prefHeight="27.0" prefWidth="85.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="113.0" fitWidth="125.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/397057724_11539820.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="171.0" prefHeight="229.0" prefWidth="177.0">
+               <children>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" onAction="#adopterprofile" prefHeight="40.0" prefWidth="177.0" text="My Profile">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" text="Home Page">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AdoptionHistory" prefHeight="40.0" prefWidth="177.0" text="Adoption History">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="177.0" text="Logout" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="CENTER" defaultButton="true" graphicTextGap="3.0" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#DeleteAccount" prefHeight="43.0" prefWidth="178.0" style="-fx-background-color: ba181b;" text="Delete Profile" textFill="#e0d8d8">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="143.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/bell-svgrepo-com.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="178.0" prefHeight="40.0" prefWidth="519.0" style="-fx-alignment: center;" text="Available Pets" textAlignment="CENTER" textFill="#023e8a" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="pettable" layoutX="187.0" layoutY="165.0" onMouseClicked="#GetSelected" prefHeight="229.0" prefWidth="326.0" AnchorPane.bottomAnchor="5.666666666666686" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="7.333333333333314" AnchorPane.topAnchor="70.66666666666669">
+        <columns>
+          <TableColumn fx:id="namcol" prefWidth="68.66668701171875" text="Pet Name" />
+          <TableColumn fx:id="agecol" prefWidth="42.66668701171875" text="Age" />
+            <TableColumn fx:id="speciescol" prefWidth="58.66668701171875" text="Species" />
+            <TableColumn fx:id="breedcol" prefWidth="58.666748046875" text="Breed" />
+            <TableColumn fx:id="healthcol" prefWidth="97.79998779296875" text="Health Status" />
+            <TableColumn fx:id="idcol" prefWidth="75.79998779296875" text="ID" visible="false" />
+            <TableColumn fx:id="availcol" prefWidth="75.0" text="avali" visible="false" />
+        </columns>
+      </TableView>
+      <Pane layoutX="513.0" layoutY="167.0" prefHeight="229.0" prefWidth="178.0">
+         <children>
+            <Button layoutX="14.0" layoutY="196.0" mnemonicParsing="false" onAction="#Adopt" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: green;" text="Adopt" textFill="#f4efef" />
+            <TextField fx:id="petname" editable="false" layoutX="14.0" layoutY="8.0" promptText="Enter Pet Name">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <TextField fx:id="petage" editable="false" layoutX="14.0" layoutY="43.0" promptText="Enter Pet Age">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <TextField fx:id="petspec" editable="false" layoutX="14.0" layoutY="78.0" promptText="Enter Species">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <TextField fx:id="petbreed" editable="false" layoutX="14.0" layoutY="114.0" promptText="Enter Breed">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <TextField fx:id="pethealth" editable="false" layoutX="14.0" layoutY="151.0" promptText="Enter Health Status">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+         </children>
+      </Pane>
+   </children>
+</Pane>
